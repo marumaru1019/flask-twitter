@@ -1,0 +1,11 @@
+// ブートストラップは最初に読み込まないと後半のscssがおかしいことになるので注意　
+@import "~bootstrap/scss/bootstrap";
+
+// layout
+@import './base/base';
+@import './mixin/mixin';
+
+body {
+    background-color: red;
+    background-size: cover;
+}
