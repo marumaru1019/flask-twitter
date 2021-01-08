@@ -4,7 +4,7 @@ on:
     - '*'
     - '!master'
 
-name: Transition Issue
+name: Transition Issue for progress
 
 jobs:
   test-transition-issue:
