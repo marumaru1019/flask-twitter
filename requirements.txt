@@ -1,0 +1,5 @@
+tweepy
+redis
+flask
+pandas
+openpyxl

@@ -1,0 +1,46 @@
+$color-green:#04b890;
+$color-gray:#cdcdcd;
+$color-gray-dark: #838383;
+
+// example-box
+$color-blue-dark:rgb(112, 154, 196);
+$color-blue-light:rgb(226, 235, 243);
+$color-red-dark : rgb(235, 104, 119);
+$color-red-light :rgb(251, 225, 228);
+$color-green-dark:rgb(1, 183, 143);
+$color-green-light:rgb(204, 241, 233);
+
+// breakpoint (bootstrap)
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+// header-breakpoint
+$header-break:1430px;
+
+// example layout is breaked at this width
+$example-break:1250px;
+
+// iphone size
+$ipx: 375px;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Hiragino Maru Gothic ProN";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+// delete out line of hanbarger menu
+button.navbar-toggler:focus{
+    outline:none;
+}
+
