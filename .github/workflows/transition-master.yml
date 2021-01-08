@@ -4,7 +4,7 @@ on:
     branches:
       - master
 
-name: Transition Issue
+name: Transition Issue for complete
 
 jobs:
   test-transition-issue:
