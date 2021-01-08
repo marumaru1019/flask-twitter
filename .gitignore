@@ -4,3 +4,4 @@ dev.sh
 twitter.py
 server.sh
 __pycache__
+os.sh
