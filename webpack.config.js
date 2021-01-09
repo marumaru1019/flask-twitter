@@ -18,10 +18,11 @@ module.exports = smp.wrap({
   //   filename: 'main.js',
   // },
 
-  // flask実行時
+  // // flask実行時 → hot reloadが聞かない　→どうやらdevserverとoutputが同じ位置じゃないとだめらしい
   output: {
     path: path.resolve(__dirname, 'static/js'),
     // distにsample.jsというファイル名で吐き出し
+    publicPath: '/js/',
     filename: 'main.js',
   },
 

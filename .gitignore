@@ -5,3 +5,5 @@ twitter.py
 server.sh
 __pycache__
 os.sh
+dep1.sh
+dep2.sh
