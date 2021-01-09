@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: 269889588377.dkr.ecr.ap-northeast-1.amazonaws.com/practice:latest
+    tty: true
+    environment:
+      FLASK_DEBUG: 1
+      FLASK_APP: ./app.py
+      consumer_secret: 0MAegdhcKCI8pf0NPAM0jokKpZhEoD4GeoYc2N5nQhIwvJ07eZ
+      consumer_key: r4vNbRKm8sAMr21HmjM8sDBxf
+      access_token_secret: X9G4d7JDcufDAcFucYBYCshG6CeS6lpKH76CExRPwo02P
+      access_token: 1327128518648623105-zzLblgRpskvbegZzF0oPfGFKHm3FKH
+
+    volumes:
+      - .:/code
+    ports:
+      - "5000:5000"
