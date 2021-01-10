@@ -19,6 +19,7 @@ workflows:
             - aws-ecr/build-and-push-image
           family: 'flask-twitter-frontend'
           cluster-name: 'flask-twitter'
+          service-name: 'flask-twitter-FrontendService-4qHpYigsKoWC'
           container-image-name-updates: 'container=frontend,tag=${CIRCLE_SHA1}'
           filters:    # ここを追加
                 branches:
