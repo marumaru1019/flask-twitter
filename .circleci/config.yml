@@ -10,6 +10,10 @@ workflows:
           repo: 'practice'
           region: AWS_REGION
           tag: '${CIRCLE_SHA1}'
+          filters:    # ここを追加
+                branches:
+                    only:
+                    - master
       - aws-ecs/deploy-service-update:
           requires:
             - aws-ecr/build-and-push-image
@@ -17,3 +21,7 @@ workflows:
           cluster-name: 'flask-twitter'
           service-name: 'flask-twitter-FrontendService-TEco3qsgE4mo'
           container-image-name-updates: 'container=practice-service,tag=${CIRCLE_SHA1}'
+          filters:    # ここを追加
+                branches:
+                    only:
+                    - master
