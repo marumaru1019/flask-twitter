@@ -17,7 +17,7 @@ workflows:
       - aws-ecs/deploy-service-update:
           requires:
             - aws-ecr/build-and-push-image
-          family: '${MY_APP_PREFIX}'
+          family: 'flask-twitter-frontend'
           cluster-name: 'flask-twitter'
           container-image-name-updates: 'container=frontend,tag=${CIRCLE_SHA1}'
           filters:    # ここを追加
