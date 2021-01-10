@@ -7,5 +7,4 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 SHELL ["/bin/bash", "-c"]
 COPY . .
-RUN source os.sh
 CMD ["python", "app.py"]
