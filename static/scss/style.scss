@@ -1,6 +1,16 @@
 // ブートストラップは最初に読み込まないと後半のscssがおかしいことになるので注意　
 @import "~bootstrap/scss/bootstrap";
 
+//各種importfileの格納
+@import './import/range_form';
+
 // layout
 @import './base/base';
 @import './mixin/mixin';
+
+// parts
+@import './parts/btn';
+
+// component
+@import './component/index';
+@import './component/form';

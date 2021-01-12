@@ -24,7 +24,11 @@ def post():
     key = request.form['key']
     since = request.form['since']
     until = request.form['until']
-    items = request.form['items']
+    volumes = request.form['volumes']
+    print(key)
+    print(since)
+    print(until)
+    print(volumes)
     tww = Tweepy()
     # リセットする
     df = pd.DataFrame(columns=['text',
@@ -38,7 +42,7 @@ def post():
                                "user_created_at"
                                ])
 
-    df = tww.get_tweet(key,since,until,int(items))
+    df = tww.get_tweet(key,since,until,int(volumes))
     df.to_excel("tweet_sample.xlsx")
     return render_template('index.html',
                         title="処理完了")
