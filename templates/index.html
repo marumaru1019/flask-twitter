@@ -8,22 +8,25 @@
 <!-- 中略 -->
 
 <body>
-    <h1>{{ title }}</h1>
-    <form action="/" method="POST" enctype="multipart/form-data">
-        <div>
-            <label for="name">キーワード：</label>
-            <textarea type="text" id="key" name="key" placeholder="#駆け出しエンジニア"></textarea>
-            <label for="name">いつから：</label>
-            <input type="text" id="since" name="since" placeholder="2020-10-2">
-            <label for="name">いつまで：</label>
-            <input type="text" id="until" name="until" placeholder="2021-1-3">
-            <label for="name">取得件数：</label>
-            <input type="text" id="items" name="items" placeholder="100">
-        </div>
-        <div>
-            <input type="submit" value="送信">
-        </div>
-    </form>
+    <h1 class="text-center mt-5 mb-5">{{ title }}</h1>
+    <section class="form">
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <label class="mt-5" for="key">keyword：</label>
+            <textarea type="text" class="input form-control" id="key" name="key" placeholder="#駆け出しエンジニア"></textarea>
+            <label class="mt-5" for="since">since：</label>
+            <input type="text" class="input form-control" id="since" name="since" placeholder="2020-10-2">
+            <label class="mt-5" for="until">until：</label>
+            <input type="text" class="input form-control" id="until" name="until" placeholder="2021-1-3">
+            <div class="range-slider">
+                <label for="volumes">volumes：</label>
+                <input class="range-slider__range" type="range" id="volumes" name="volumes" value="30" min="0" max="100" step="10">
+                <span class="range-slider__value">0</span>
+            </div>
+            <div class="mt-5 form__submit">
+                <input class="m-auto submit-btn btn" type="submit" value="Get">
+            </div>
+        </form>
+    </section>
 
     <!-- 開発用 -->
     <!-- <script src="./main.js"></script> -->

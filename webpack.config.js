@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const smp = new SpeedMeasurePlugin()
 
@@ -75,4 +76,10 @@ module.exports = smp.wrap({
   },
   // ES5(IE11等)向けの指定（webpack 5以上で必要）
   // target: ["web", "es5"],
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
+  ]
 });

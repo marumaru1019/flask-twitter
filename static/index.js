@@ -10,3 +10,6 @@ import '@fortawesome/fontawesome-free/js/regular';
 
 
 import "./scss/style.scss";
+
+import "./js/import/range_form.js"
+import "./js/component/form.js"
