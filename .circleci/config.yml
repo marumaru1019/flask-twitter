@@ -1,14 +1,13 @@
 version: 2.1
 orbs:
-  deploy-to-heroku: betterdoc/deploy-to-heroku@4.2.0
+  heroku-container: pbrisbin/heroku-container@1.0.0
 workflows:
-  docker-build-release:
+  build_and_release:
     jobs:
-      - deploy-to-heroku/docker-build-release:
-        #
+      - heroku-container/push-and-release:
           app-name: twitter-techtech
         # masterブランチへのpushでのみ反応
-          filters:
-                branches:
-                    only:
-                    - master
+        filters:
+              branches:
+                  only:
+                  - master
