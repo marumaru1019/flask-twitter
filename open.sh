@@ -1,7 +1,7 @@
 docker-compose up -d
 
 # たちあげまで待つ
-sleep 5
+sleep 10
 
 # fileをオープン
 open http://localhost:5000/
