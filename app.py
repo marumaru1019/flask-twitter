@@ -14,8 +14,8 @@ cache = redis.Redis(host='redis', port=6379)
 # getのときの処理
 @app.route('/', methods=['GET'])
 def get():
-	return render_template('index.html',
-                        title='Twitter Getter(get)')
+    return render_template('index.html',
+                           title='Twitter Getter(get)')
 
 
 # postのときの処理
@@ -42,10 +42,10 @@ def post():
                                "user_created_at"
                                ])
 
-    df = tww.get_tweet(key,since,until,int(volumes))
+    df = tww.get_tweet(key, since, until, int(volumes))
     df.to_excel("tweet_sample.xlsx")
     return render_template('index.html',
-                        title="処理完了")
+                           title="Complete")
 
 
 # ファイルのダウンロード
@@ -58,6 +58,8 @@ def downloadzip():
     return response
 
 
-## おまじない
+# おまじない
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    # app.run(host='0.0.0.0', debug=True)
+    app.run(debug=True, host='0.0.0.0',
+            port=int(os.environ.get('PORT', 5000)))

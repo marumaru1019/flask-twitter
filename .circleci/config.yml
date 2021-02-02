@@ -1,36 +1,14 @@
 version: 2.1
 orbs:
-  aws-ecr: circleci/aws-ecr@6.5.0
-  aws-ecs: circleci/aws-ecs@0.0.10
+  deploy-to-heroku: betterdoc/deploy-to-heroku@4.2.0
 workflows:
-  build-and-deploy:
+  docker-build-release:
     jobs:
-      - aws-ecr/build-and-push-image:
+      - deploy-to-heroku/docker-build-release:
         #
-          account-url: AWS_ECR_ACCOUNT_URL
-        # 対象のECRのリポジトリ名
-          repo: 'practice'
-        # 自分のリージョン (ciのサイトより変更可能) [myaccountid].dkr.ecr.ap-northeast-1.amazonaws.com
-          region: AWS_REGION
-        # コンテナのタグを自動で付与 重複防止
-          tag: '${CIRCLE_SHA1}'
+          app-name: twitter-techtech
         # masterブランチへのpushでのみ反応
           filters:
-                branches:
-                    only:
-                    - master
-      - aws-ecs/deploy-service-update:
-          requires:
-            - aws-ecr/build-and-push-image
-          # タスク定義名
-          family: 'flask-twitter-frontend'
-          #対象のクラスター名
-          cluster-name: 'flask-twitter'
-          #サービス名
-          service-name: 'flask-twitter-FrontendService-4qHpYigsKoWC'
-          #container はサービスの検出名から見る　または docker compose ps で name　から確認
-          container-image-name-updates: 'container=frontend,tag=${CIRCLE_SHA1}'
-          filters:    # ここを追加
                 branches:
                     only:
                     - master

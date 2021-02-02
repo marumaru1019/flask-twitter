@@ -1,8 +1,45 @@
-.form{
+.form {
     display: block;
-    width:60%;
+    width: 60%;
+    padding: 30px;
+    background: $accent-color;
+    color: $base-color;
     margin: auto;
-    .submit-btn{
-        @include btn-action(white,20%,True);
+
+    .submit-btn {
+        background-color: $base-color;
+        display: block;
+        margin: auto;
+        color: white;
+        padding: 10px 30px;
+        text-align: center;
+        border-radius: 10px;
+        border-color: white;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: white;
+            border-color: $base-color;
+            color: $base-color;
+            transition: all 0.3s;
+        }
+    }
+
+    input {
+        border-radius: 20px;
+    }
+
+    textarea {
+        border-radius: 10px;
+    }
+}
+
+.js-submit {
+    &-show {
+        display: block;
+    }
+
+    &-hide {
+        display: none !important;
     }
 }

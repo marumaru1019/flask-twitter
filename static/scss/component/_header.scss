@@ -1,0 +1,29 @@
+.header {
+    background: transparent;
+    height: 50px;
+
+    .global-header {
+        padding: 30px;
+    }
+
+    &__logo {
+        font-size: 25px;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &-text {
+            color: white;
+        }
+    }
+}
+
+.target-twitter {
+    transition: 0.5s;
+    transform: rotateY(0deg);
+
+    &:hover {
+        transform: rotateY(360deg);
+    }
+}
