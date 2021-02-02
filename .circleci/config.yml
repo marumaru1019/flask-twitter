@@ -6,8 +6,8 @@ workflows:
     jobs:
       - heroku-container/push-and-release:
           app-name: twitter-techtech
-        # masterブランチへのpushでのみ反応
-        filters:
-              branches:
-                  only:
-                  - master
+          # masterブランチへのpushでのみ反応
+          filters:
+                branches:
+                    only:
+                    - master
