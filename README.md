@@ -1,7 +1,11 @@
 # 仕様
-Docker :  20.10.2
-docker-compose : 1.27.4
-TwitterAPI の 各種キー
+Docker :  20.10.2   
+docker-compose : 1.27.4   
+TwitterAPI の 各種キー   
+|  Docker |  20.10.2  |
+| ---- | ---- |
+|  docker-compose  |  1.27.4  |
+|  TwitterAPI  |  各種  |
 
 # 使いかた
 
