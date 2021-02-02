@@ -14,7 +14,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def get():
     return render_template('index.html',
-                           title='Twitter Getter')
+                           title='Twitter Get')
 
 
 # postのときの処理
