@@ -11,23 +11,13 @@ const common = require('./webpack.common.js') // 汎用設定をインポート
 module.exports = merge(common, {
     // modeはproduction/developmentで記述
     // ""で囲むことに注意
-    mode: "development",
+    mode: "production",
     // どのファイルを読み込むか　default=> ./src/index.js
     entry: "./static/index.js",
-
-    //　entryで読み込んだファイルのコンパイルの吐き出し場所
-    // フロント開発時
+    // node実行時 → hot reloadが聞かない　→どうやらdevserverとoutputが同じ位置じゃないとだめらしい
     output: {
-        path: path.resolve(__dirname, "templates"),
+        path: path.resolve(__dirname, "static"),
         // distにsample.jsというファイル名で吐き出し
         filename: "main.js",
-    },
-    devtool: 'inline-source-map', // 開発用ソースマップ
-    devServer: {
-        contentBase: path.resolve(__dirname, "templates"),
-        host: "0.0.0.0",
-        hot: true,
-        open: true,
-        port: 9005,
     },
 });
