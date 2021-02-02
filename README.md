@@ -58,4 +58,4 @@ sh open.sh
 
 初回の起動には時間がかかりますが, 以下のように表示されれば大丈夫です。
 
-[ディスプレイ画像](http://localhost/data/ddc935e4e234686fc328f21ab15c5c4f.png)
+[ディスプレイ画像](https://github.com/marumaru1019/flask-twitter/ディスプレイ画像.png)
