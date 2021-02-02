@@ -8,14 +8,13 @@ from flask import *
 from twitter import Tweepy
 
 app = Flask(__name__)
-cache = redis.Redis(host='redis', port=6379)
 
 
 # getのときの処理
 @app.route('/', methods=['GET'])
 def get():
     return render_template('index.html',
-                           title='Twitter Getter(get)')
+                           title='Twitter Getter')
 
 
 # postのときの処理

@@ -11,10 +11,15 @@
 
         &:hover {
             text-decoration: none;
+            color: $accent-color;
         }
 
         &-text {
             color: white;
+
+            &:hover {
+                color: $accent-color;
+            }
         }
     }
 }
