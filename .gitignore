@@ -1,10 +1,7 @@
 node_modules
 tweet_sample.xlsx
-dev.sh
-server.sh
 __pycache__
-os.sh
-dep1.sh
-dep2.sh
 docker-compose.prod.yml
 .circleci/config-ecs.yml
+!open.sh
+*.sh
