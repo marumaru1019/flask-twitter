@@ -4,7 +4,6 @@ const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-
 module.exports = smp.wrap({
     // modeはproduction/developmentで記述
     // ""で囲むことに注意
@@ -21,7 +20,8 @@ module.exports = smp.wrap({
     },
 
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
@@ -37,7 +37,8 @@ module.exports = smp.wrap({
                 // 拡張子がsassとscssのファイルを対象とする
                 test: /\.[s][ac]ss$/i,
                 // ローダー名
-                use: [{
+                use: [
+                    {
                         loader: "style-loader", // inject CSS to page
                     },
                     {
@@ -63,14 +64,16 @@ module.exports = smp.wrap({
             },
             {
                 test: /\.(gif|png|jpg|eot|wof|woff|woff2|ttf|svg)$/,
-                use: [{
-                    loader: "file-loader",
-                    options: {
-                        name: "[name].[ext]",
-                        outputPath: "./webfonts",
-                        publicPath: "../webfonts",
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "./webfonts",
+                            publicPath: "../webfonts",
+                        },
                     },
-                }, ],
+                ],
             },
             // {
             //  // 対象となるファイルの拡張子

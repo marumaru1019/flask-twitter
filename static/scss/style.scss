@@ -1,5 +1,6 @@
 // ブートストラップは最初に読み込まないと後半のscssがおかしいことになるので注意
 @import "~bootstrap/scss/bootstrap";
+@import "~hamburgers/_sass/hamburgers/hamburgers";
 
 // layout
 @import "./base/base";
@@ -10,8 +11,11 @@
 
 // parts
 @import "./parts/btn";
+@import "./parts/hamburger";
 
 // component
 @import "./component/index";
 @import "./component/form";
 @import "./component/header";
+@import "./component/side-menu";
+@import "./component/usage";

@@ -3,10 +3,8 @@ const webpack = require("webpack");
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const {
-    merge
-} = require('webpack-merge');
-const common = require('./webpack.common.js') // 汎用設定をインポート
+const { merge } = require("webpack-merge");
+const common = require("./webpack.common.js"); // 汎用設定をインポート
 
 module.exports = merge(common, {
     // modeはproduction/developmentで記述
@@ -22,7 +20,7 @@ module.exports = merge(common, {
         // distにsample.jsというファイル名で吐き出し
         filename: "main.js",
     },
-    devtool: 'inline-source-map', // 開発用ソースマップ
+    devtool: "inline-source-map", // 開発用ソースマップ
     devServer: {
         contentBase: path.resolve(__dirname, "templates"),
         host: "0.0.0.0",
