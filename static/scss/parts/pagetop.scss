@@ -1,0 +1,48 @@
+.page__top {
+    // 右下20pxのいちで固定
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    color: #fff;
+    font-size: 34px;
+    text-decoration: none;
+    display: flex;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    width: 70px;
+    height: 70px;
+    animation: up-down 1s linear 0s infinite normal;
+    &:hover {
+        color: white;
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translate(0px, 10px);
+    }
+    50% {
+        transform: translate(0px, 0);
+    }
+    100% {
+        transform: translate(0, 10px);
+    }
+}
+
+.animation {
+    width: 100px;
+    height: 100px;
+    background: #00bcd4;
+    animation: animation-haniwaman 3s linear 0s infinite normal;
+}
+@keyframes animation-haniwaman {
+    0% {
+        width: 100px;
+    }
+    100% {
+        width: 100%;
+    }
+}

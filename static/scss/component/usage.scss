@@ -6,16 +6,25 @@
     background-color: #fff;
     box-shadow: inset 2px 2px 5px #dfe4ea, inset -5px -5px 10px #fff;
 
+    &__title {
+        width: 70%;
+    }
+
     &__keyword {
         width: 60%;
         margin: 50px auto 0;
         &__title {
             border-left: 7px solid $base-color;
             padding-left: 20px;
+            font-size: 30px;
         }
 
         &__description {
-            
+            font-size: 20px;
+            margin-top: 20px;
+            &-gray {
+                color: rgb(216, 215, 215);
+            }
         }
     }
 }

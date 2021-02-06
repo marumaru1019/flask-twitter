@@ -41,25 +41,32 @@
             <div class="row">
                 <h2 class="usage__title text-center col-12">KEYWORD SEARCH</h2>
                 <div class="usage__keyword col-8">
-                    <h3 class="usage__keyword__title">keyword</h3>
-                    <p class="usage__keyword__description">ツイッターで検索したいワードをいれて下さい。</p>
+                    <h3 class="usage__keyword__title">Keyword</h3>
+                    <p class="usage__keyword__description">ツイートに含まれているキーワードを入力できます。</p>
+                    <p class="usage__keyword__description-gray">(例) #駆け出しエンジニア、 Rails、 kaggle受賞した など</p>
                 </div>
                 <div class="usage__keyword col-8">
-                    <h3 class="usage__keyword__title">keyword</h3>
-                    <p class="usage__keyword__description">ツイッターで検索したいワードをいれて下さい。</p>
+                    <h3 class="usage__keyword__title">Since, Until</h3>
+                    <p class="usage__keyword__description">ツイートがつぶやかれた期間を選択できます。<br>
+                        TwitterAPIの関係で1週間以上の期間をあけるとエラーになる可能性が高いので一週間以内の期限で選択して下さい。</p>
+                    <p class="usage__keyword__description-gray">(例) Since: 2020-10-3 Until: 2020-10-5
+                        (2020年10月3日から2020年10月5日のツイートに制限)</p>
                 </div>
                 <div class="usage__keyword col-8">
-                    <h3 class="usage__keyword__title">keyword</h3>
-                    <p class="usage__keyword__description">ツイッターで検索したいワードをいれて下さい。</p>
+                    <h3 class="usage__keyword__title">Volume</h3>
+                    <p class="usage__keyword__description">ツイートの最大取得件数を選択できます。(10件毎 max100件まで)。</p>
+                    <p class="usage__keyword__description-gray">※
+                        短時間の間にツイートを取得しすぎてしまうとTwitterAPIの関係で不審accountとみなされ今後使えなくなる可能性がありますのでご注意下さい。</p>
                 </div>
             </div>
         </article>
     </section>
+    <a href="" id="page-top" class="page__top"><i class="fas fa-chevron-up arrow-up"></i></a>
 
     <!-- 開発用 -->
-    <script src="./main.js"></script>
+    <!-- <script src="./main.js"></script> -->
     <!-- 本番用 -->
-    <!-- <script src="../static/main.js"></script> -->
+    <script src="../static/main.js"></script>
 </body>
 
 </html>

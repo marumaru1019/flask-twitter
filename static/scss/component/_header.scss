@@ -38,16 +38,15 @@
         background: transparent;
         border-radius: 100%;
         transition: all 0.2s ease-in-out;
+        background: $base-color;
 
         // display: none;
         &:hover {
             transition: all 0.2s ease-in-out;
-            background: $base-color;
         }
 
         &:focus {
             outline: none;
-            background: $base-color;
         }
 
         &__inner {

@@ -20,7 +20,7 @@ def get():
 
 
 @app.route('/key', methods=['GET'])
-def get():
+def key():
     return render_template('twitter_get.html',
                            title='KEYWORD SEARCH')
 
