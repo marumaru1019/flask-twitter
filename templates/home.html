@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tweet Get</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+</head>
+
+<!-- 中略 -->
+
+<body>
+    <section class="header">
+        <nav class="global-header">
+            <a href="/" class="header__logo">
+                <span class="header__logo-text">
+                    <i class="fab fa-twitter target-twitter"></i>
+                    Twitter Get
+                </span>
+            </a>
+            <button id="js-hamburger" class="header__hamburger hamburger hamburger--elastic" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner header__hamburger__inner"></span>
+                </span>
+            </button>
+        </nav>
+    </section>
+    <section id="js-side" class="side">
+        <aside class="side__menu">
+            <ul class="side__menu__wrapper">
+                <li class="side__menu__item text-center"><a href="/">HOME</a></li>
+                <li class="side__menu__item text-center"><a href="/key">KEYWORD SEARCH</a></li>
+                <li class="side__menu__item text-center"><a href="">USER SEARCH</a></li>
+            </ul>
+        </aside>
+    </section>
+    <h1 class="text-center mt-5 mb-5" id="js-title">{{ title }}</h1>
+    <section class="usage">
+        <article class="usage__container container">
+            <div class="row">
+                <h2 class="usage__title text-center col-12">KEYWORD SEARCH</h2>
+                <div class="usage__keyword col-8">
+                    <h3 class="usage__keyword__title">keyword</h3>
+                    <p class="usage__keyword__description">ツイッターで検索したいワードをいれて下さい。</p>
+                </div>
+                <div class="usage__keyword col-8">
+                    <h3 class="usage__keyword__title">keyword</h3>
+                    <p class="usage__keyword__description">ツイッターで検索したいワードをいれて下さい。</p>
+                </div>
+                <div class="usage__keyword col-8">
+                    <h3 class="usage__keyword__title">keyword</h3>
+                    <p class="usage__keyword__description">ツイッターで検索したいワードをいれて下さい。</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- 開発用 -->
+    <script src="./main.js"></script>
+    <!-- 本番用 -->
+    <!-- <script src="../static/main.js"></script> -->
+</body>
+
+</html>

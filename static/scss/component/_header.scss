@@ -1,0 +1,82 @@
+.header {
+    background: transparent;
+    height: 50px;
+
+    .global-header {
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        /* 子要素をflexboxにより中央に配置する */
+    }
+
+    &__logo {
+        font-size: 25px;
+        vertical-align: middle;
+
+        &:hover {
+            text-decoration: none;
+            color: $accent-color;
+        }
+
+        &-text {
+            color: white;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    &__hamburger {
+        z-index: 5;
+        margin: 10px;
+        height: 70px;
+        width: 70px;
+        vertical-align: middle;
+        margin: 0 0 0 auto;
+        border: none;
+        background: transparent;
+        border-radius: 100%;
+        transition: all 0.2s ease-in-out;
+
+        // display: none;
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            background: $base-color;
+        }
+
+        &:focus {
+            outline: none;
+            background: $base-color;
+        }
+
+        &__inner {
+            // background: white;
+        }
+    }
+}
+
+.target-twitter {
+    transition: 0.5s;
+    transform: rotateY(0deg);
+
+    &:hover {
+        transform: rotateY(360deg);
+    }
+}
+
+.hamburger-box {
+    vertical-align: middle;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    background: white;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background: white;
+}

@@ -1,10 +1,10 @@
 version: 2.1
 orbs:
-  aws-ecr: circleci/aws-ecr@6.5.0
-  aws-ecs: circleci/aws-ecs@0.0.10
+  heroku-container: pbrisbin/heroku-container@1.0.0
 workflows:
-  build-and-deploy:
+  build_and_release:
     jobs:
+<<<<<<< HEAD
       - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_ACCOUNT_URL
           repo: 'practice'
@@ -17,3 +17,12 @@ workflows:
           cluster-name: 'flask-twitter'
           service-name: 'flask-twitter-FrontendService-TEco3qsgE4mo'
           container-image-name-updates: 'container=practice-service,tag=${CIRCLE_SHA1}'
+=======
+      - heroku-container/push-and-release:
+          app-name: twitter-techtech
+          # masterブランチへのpushでのみ反応
+          filters:
+                branches:
+                    only:
+                    - master
+>>>>>>> 69271c65aca0ce18fd857a6b7061a535801338d6

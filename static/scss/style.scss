@@ -1,10 +1,21 @@
-// ブートストラップは最初に読み込まないと後半のscssがおかしいことになるので注意　
+// ブートストラップは最初に読み込まないと後半のscssがおかしいことになるので注意
 @import "~bootstrap/scss/bootstrap";
+@import "~hamburgers/_sass/hamburgers/hamburgers";
 
 // layout
-@import './base/base';
-@import './mixin/mixin';
+@import "./base/base";
+@import "./mixin/mixin";
 
-body {
-    background-size: cover;
-}
+//各種importfileの格納
+@import "./import/range_form";
+
+// parts
+@import "./parts/btn";
+@import "./parts/hamburger";
+
+// component
+@import "./component/index";
+@import "./component/form";
+@import "./component/header";
+@import "./component/side-menu";
+@import "./component/usage";

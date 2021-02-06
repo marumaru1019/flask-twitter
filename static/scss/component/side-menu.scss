@@ -1,0 +1,39 @@
+.side {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: #00bcd4;
+    transition: all 0.3s 0.2s ease-in-out;
+    animation: animation-haniwaman-back 1s ease forwards;
+
+    &-open {
+        width: 400px;
+    }
+
+    &__menu {
+        height: 80%;
+        margin: 10% auto;
+        display: none;
+
+        &__wrapper {
+            height: 80vh;
+            margin: 20vh auto;
+        }
+
+        &__item {
+            margin: 100px 0;
+        }
+
+        &__item > a {
+            color: #fff;
+            font-size: 20px;
+            letter-spacing: 2px;
+            padding: 20px 0;
+            position: relative;
+            @include under-fade(white);
+        }
+    }
+}

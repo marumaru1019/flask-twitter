@@ -3,6 +3,7 @@ import pandas as pd
 import time
 import os
 
+
 class Tweepy:
 
     def __init__(self):
@@ -41,13 +42,15 @@ class Tweepy:
                                    "follower",
                                    "user_created_at"
                                    ])
+
         tweets = tw.Cursor(self.api.search,
                            q=search_word,
                            lang="ja",
                            tweet_mode="expanded",
                            result_type="mixed",
                            since=since,
-                           until=until
+                           # untilが効かなくなった
+                           # until=until
                            ).items(items)
 
         j = 1
@@ -63,8 +66,6 @@ class Tweepy:
             list_follower.append(tweet.user.followers_count)
             list_user_created_at.append(tweet.user.created_at)
         j += 1
-
-
 
         df_new = df.assign(text=list_text,
                            tweet_created_at=list_tweet_created_at,
