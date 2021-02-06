@@ -3,10 +3,8 @@ const webpack = require("webpack");
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const {
-    merge
-} = require('webpack-merge');
-const common = require('./webpack.common.js') // 汎用設定をインポート
+const { merge } = require("webpack-merge");
+const common = require("./webpack.common.js"); // 汎用設定をインポート
 
 module.exports = merge(common, {
     // modeはproduction/developmentで記述

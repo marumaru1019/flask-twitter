@@ -13,12 +13,20 @@ app = Flask(__name__)
 # getのときの処理
 @app.route('/', methods=['GET'])
 def get():
-    return render_template('index.html',
-                           title='Twitter Get')
+    return render_template('home.html',
+                           title='HOW TO USE')
+
+# getのときの処理
+
+
+@app.route('/key', methods=['GET'])
+def get():
+    return render_template('twitter_get.html',
+                           title='KEYWORD SEARCH')
 
 
 # postのときの処理
-@app.route('/', methods=['POST'])
+@app.route('/key', methods=['POST'])
 def post():
     key = request.form['key']
     since = request.form['since']

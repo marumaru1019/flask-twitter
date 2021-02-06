@@ -46,3 +46,15 @@ button.navbar-toggler:focus {
 .br20 {
     border-radius: 20%;
 }
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+li {
+    list-style: none;
+}

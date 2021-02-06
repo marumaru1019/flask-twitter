@@ -13,3 +13,5 @@ import "./scss/style.scss";
 
 import "./js/import/range_form.js";
 import "./js/component/form.js";
+import "./js/component/humburger";
+import "./js/component/side-menu";
