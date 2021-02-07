@@ -26,7 +26,7 @@ def key():
 
 
 # postのときの処理
-@app.route('/', methods=['POST'])
+@app.route('/twitter_get', methods=['POST'])
 def post():
     key = request.form['key']
     since = request.form['since']
