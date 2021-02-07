@@ -26,7 +26,7 @@ def key():
 
 
 # postのときの処理
-@app.route('/key', methods=['POST'])
+@app.route('/', methods=['POST'])
 def post():
     key = request.form['key']
     since = request.form['since']
@@ -51,7 +51,7 @@ def post():
 
     df = tww.get_tweet(key, since, until, int(volumes))
     df.to_excel("tweet_sample.xlsx")
-    return render_template('index.html',
+    return render_template('twitter_get.html',
                            title="Complete")
 
 
