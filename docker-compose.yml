@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: false
+    environment:
+      FLASK_DEBUG: 1
+      FLASK_APP: ./app.py
+
+    volumes:
+      - .:/code
+    ports:
+      - "5000:5000"
