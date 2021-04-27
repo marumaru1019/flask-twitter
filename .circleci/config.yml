@@ -1,18 +1,17 @@
 version: 2.1
 orbs:
   heroku-container: pbrisbin/heroku-container@1.0.0
-  gcp-cloud-run: circleci/gcp-cloud-run@1.0.2
+  gcp-cloud-run: versbox/gcp-cloud-run@1.0.0
 
 jobs:
   build_and_deploy:
     docker:
       - image: 'cimg/base:stable'
     steps:
-      - checkout
-      # - cloudrun/init
-      - cloudrun/build:
+      - gcp-cloud-run/init
+      - gcp-cloud-run/build:
           tag: 'gcr.io/${GOOGLE_PROJECT_ID}/flask-twitter:${CIRCLE_SHA1}'
-      - cloudrun/deploy:
+      - gcp-cloud-run/deploy:
           image: 'gcr.io/${GOOGLE_PROJECT_ID}/flask-twitter:${CIRCLE_SHA1}'
           platform: managed
           region: asia-northeast1-a
