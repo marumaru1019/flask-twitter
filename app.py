@@ -52,7 +52,7 @@ def post():
     df = tww.get_tweet(key, since, until, int(volumes))
     df.to_excel("tweet_sample.xlsx")
     return render_template('twitter_get.html',
-                           title="Complete")
+                           title="Completeだよ")
 
 
 # ファイルのダウンロード
