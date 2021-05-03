@@ -1,3 +1,10 @@
+# Twitter Get
+
+![ディスプレイ画像](https://user-images.githubusercontent.com/70362624/106572799-3c7b5d80-657c-11eb-87a8-a21a10de3699.png)
+
+↓URL
+https://flask-twitter-447ez3ds2a-an.a.run.app/
+
 # 仕様
 |  Docker |  20.10.2  |
 | ---- | ---- |
@@ -6,7 +13,7 @@
 
 # 使いかた
 
-ディレクトリが以下のような口座雨になっていることを確認して下さい。
+ディレクトリが以下のような構造になっていることを確認して下さい。
 
 ```
 .
